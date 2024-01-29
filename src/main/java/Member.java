@@ -13,7 +13,11 @@ public class Member {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setHolidays(List<Integer> holidays) {
+        this.holidays = holidays;
+    }
+
+    public List<Integer> getHolidays() {
+        return this.holidays;
     }
 }
