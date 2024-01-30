@@ -31,4 +31,10 @@ public class Scheduler {
     public int getLastDay() {
         return calendar.getActualMaximum(Calendar.DATE);
     }
+
+    public void schedule() {
+        for (int i = 0; i < getLastDay() * 2; i++) {
+            System.out.println((i/2 + 1) + " " + getMembers().get(i%getMembers().size()).getName());
+        }
+    }
 }
