@@ -1,8 +1,11 @@
 public class Housework {
     private String name;
-    private int timesPerWeek;
+    private Times times;
+    private int count;
 
-    public Housework(String name) {
+    public Housework(String name, Times times, int count) {
         this.name = name;
+        this.times = times;
+        this.count = count;
     }
 }
