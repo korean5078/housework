@@ -1,3 +1,5 @@
+package com.housework;
+
 public class Housework {
     private String name;
     private Times times;

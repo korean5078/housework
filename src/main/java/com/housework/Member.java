@@ -1,3 +1,5 @@
+package com.housework;
+
 import java.util.List;
 
 public class Member {
