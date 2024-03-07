@@ -10,4 +10,25 @@ public class Housework {
         this.times = times;
         this.count = count;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Times getTimes() {
+        return times;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    @Override
+    public String toString() {
+        return "Housework{" +
+                "name='" + name + '\'' +
+                ", times=" + times +
+                ", count=" + count +
+                '}';
+    }
 }

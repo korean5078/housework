@@ -19,21 +19,17 @@ public class SchedulerTest {
     }
 
     @Test
-    void 스케쥴러_멤버_설정() {
+    void 스케줄러_테스트() {
+        List<Housework> houseworkList = new ArrayList<>();
+        houseworkList.add(new Housework("설거지", Times.day, 2));
+
         List<Member> members = new ArrayList<>();
+        members.add(new Member("h1"));
+        members.add(new Member("h2"));
+        members.add(new Member("h3"));
+        members.add(new Member("h4"));
+
         Scheduler scheduler = new Scheduler();
-
-        Member member = new Member("member");
-        member.setHolidays(List.of(1,2,3));
-
-        Member member2 = new Member("member");
-        member2.setHolidays(List.of(4,5,6));
-
-        members.add(member);
-        members.add(member2);
-
-        scheduler.setMembers(members);
-        Assertions.assertThat(member.getHolidays()).isEqualTo(scheduler.getMembers().get(0).getHolidays());
-        Assertions.assertThat(member2.getHolidays()).isEqualTo(scheduler.getMembers().get(1).getHolidays());
+        scheduler.schedule(members, houseworkList);
     }
 }
